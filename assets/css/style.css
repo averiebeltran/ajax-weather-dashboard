@@ -71,3 +71,38 @@ button {
     align-items: center;
     margin: 0 0 20px;
 }
+
+.five-day {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.five-day li {
+    background-color: #add8e6;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.low {
+    background-color: green;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+.moderate {
+    background-color: orange;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+.high {
+    background-color: red;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
