@@ -14,17 +14,40 @@ $( document ).ready(function() {
         `);
     });
 
+    const button = $('button');
+    const listItem = $('.saved-searches li');
 
+    $('input').keyup(function() {
+        $('button').prop('disabled', false);
+    });
 
-
-    $('button').click(function(e) {
+    button.add(listItem).click(function(e) {
         e.preventDefault();
         $(".five-day").empty();
-        const city = $('input').val();
+
+        $('.main-landing').addClass('hidden');
+        $('.dashboard').removeClass('hidden');
+
+        const target= $(e.target);
+        let city;
+
+        if (target.is(':button') || target.is('i')) {
+            city = $('input').val();
+        } else if (target.is('li')) {
+            city = target[0].innerHTML;
+        }
+
+        if (city === undefined || city === '') {
+            return;
+        }
+
         localStorage.setItem('city-' + city, city);
 
         const weatherUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=c2a1f6a8ab689e2fe8baffb9baf0d523";
+        getWeather(weatherUrl);
+    });
 
+    function getWeather(weatherUrl) {
         $.ajax({
             method: "GET",
             url: weatherUrl,
@@ -100,6 +123,6 @@ $( document ).ready(function() {
                 });
             }
         });
-    });
+    }
 
 });
