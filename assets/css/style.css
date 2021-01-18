@@ -42,7 +42,7 @@ input {
     font-size: 16px;
     padding: 5px;
     border: 1px solid #000080;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 button {
@@ -50,7 +50,23 @@ button {
     background-color: #add8e6;
     color: #000080;
     border: 1px solid #000080;
-    border-radius: 5px;
+    border-radius: 3px;
+
+}
+
+.saved-searches {
+    list-style-type: none;
+    padding: 0px;
+    background-color: white;
+    border-top: 1px solid #000080;
+    border-right: 1px solid #000080;
+    border-left: 1px solid #000080;
+    border-radius:3px;
+}
+
+.saved-searches li {
+    border-bottom: 1px solid #000080;
+    padding: 8px;
 
 }
 
