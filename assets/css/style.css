@@ -70,6 +70,13 @@ button {
 
 }
 
+.main-landing {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
 .dashboard {
     width: 70%;
     padding: 10px;
@@ -121,4 +128,8 @@ button {
     color: white;
     padding: 3px 5px;
     border-radius: 3px;
+}
+
+.hidden {
+    display: none;
 }
