@@ -43,7 +43,7 @@ $( document ).ready(function() {
 
         localStorage.setItem('city-' + city, city);
 
-        const weatherUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=c2a1f6a8ab689e2fe8baffb9baf0d523";
+        const weatherUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=c2a1f6a8ab689e2fe8baffb9baf0d523";
         getWeather(weatherUrl);
     });
 
@@ -54,7 +54,7 @@ $( document ).ready(function() {
             data: 'json',
             success: (response) => {
                 const icon = response.weather[0].icon;
-                const iconurl = "http://openweathermap.org/img/w/" + icon + ".png";
+                const iconurl = "https://openweathermap.org/img/w/" + icon + ".png";
                 const timestamp = response.dt;
                 const date = new Date(timestamp * 1000);
                 const month = (date.getMonth() + 1);
@@ -69,7 +69,7 @@ $( document ).ready(function() {
 
                 const lat = response.coord.lat;
                 const lon = response.coord.lon;
-                const uvUrl = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=c2a1f6a8ab689e2fe8baffb9baf0d523";
+                const uvUrl = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=c2a1f6a8ab689e2fe8baffb9baf0d523";
                 const fiveDayUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=hourly,minutely&units=imperial&appid=c2a1f6a8ab689e2fe8baffb9baf0d523"
 
                 $.ajax({
