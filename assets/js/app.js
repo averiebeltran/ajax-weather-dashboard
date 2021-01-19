@@ -112,7 +112,7 @@ $( document ).ready(function() {
                                 $(".five-day").append(`
                                     <li>
                                         <p>` + formattedDay + `</p>
-                                        <img src="http://openweathermap.org/img/w/` + weather + `.png"/>
+                                        <img src="https://openweathermap.org/img/w/` + weather + `.png"/>
                                         <p>Temp: ` + temp + ` &#8457</p>
                                         <p>Humidity: ` + humidity + `%</p>
                                     </li>
